@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Wendi Bootes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav id="main-nav" class="solid">
+    <a href="index.html" class="nav-name">Wendi Bootes</a>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="inner-header">
+    <div class="inner-header-bg"></div>
+    <h1 class="inner-header-title">Contact</h1>
+  </div>
+
+  <div class="page">
+    <section>
+      <div class="fade">
+        <div class="contact-body">
+          <p>I welcome correspondence — whether you're interested in collaborating, have questions about the work, or would simply like to read something. Academic journals often sit behind paywalls; if you don't have institutional access to an article, write and I'll send you a copy. I'm also happy to share course syllabi on request.</p>
+          <a href="mailto:wendibootes@gmail.com" class="contact-email">wendibootes@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>Wendi Bootes &nbsp;&middot;&nbsp; <a href="mailto:wendibootes@gmail.com">wendibootes@gmail.com</a></footer>
+  <script>
+    const obs = new IntersectionObserver(entries => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} }); }, {threshold:.06});
+    document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

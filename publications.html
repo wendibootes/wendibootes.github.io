@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications — Wendi Bootes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav id="main-nav" class="solid">
+    <a href="index.html" class="nav-name">Wendi Bootes</a>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="publications.html" class="active">Publications</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="inner-header">
+    <div class="inner-header-bg"></div>
+    <h1 class="inner-header-title">Publications</h1>
+  </div>
+
+  <div class="page">
+    <section>
+      <div class="fade">
+        <div class="pub-group">
+          <p class="pub-group-title">Peer-Reviewed Articles</p>
+          <div class="pub-item">
+            <p class="pub-title">"Untouchable Minds: On Character and Type in the Anti-Colonial Novel"</p>
+            <p class="pub-meta"><em>Journal of Narrative Theory</em> 57, no. 2 &middot; forthcoming Winter 2026</p>
+          </div>
+          <div class="pub-item">
+            <p class="pub-title">"Strange Revolution: Viktor Shklovsky and the Formalism of Feeling"</p>
+            <p class="pub-meta"><em>New Literary History</em> 56, no. 4 &middot; forthcoming Spring 2026</p>
+          </div>
+          <div class="pub-item">
+            <p class="pub-title"><a href="https://muse.jhu.edu/pub/1/article/921549/pdf" target="_blank" rel="noopener">"Elizabeth Bowen's Grammar of Waning Empire"</a></p>
+            <p class="pub-meta"><em>MFS: Modern Fiction Studies</em> 70, no. 1 (Spring 2024): 78–102</p>
+            <span class="pub-award">Winner &middot; 2024 Margaret Church MFS Memorial Prize</span>
+          </div>
+        </div>
+        <div class="pub-group">
+          <p class="pub-group-title">Essays &amp; Translations</p>
+          <div class="pub-item">
+            <p class="pub-title"><a href="https://plumepoetry.com/odesa-poets-portfolio/" target="_blank" rel="noopener">"Odesa Poets Portfolio"</a></p>
+            <p class="pub-meta">Ed. and intro. Ilya Kaminsky. Russian to English translations. <em>Plume</em> 159 &middot; November 2024</p>
+          </div>
+          <div class="pub-item">
+            <p class="pub-title"><a href="https://lareviewofbooks.org/article/junk-and-underwear-fabrication-and-factography-in-the-soviet-union/" target="_blank" rel="noopener">"Junk and Underwear: Fabrication and Factography in the Soviet Union"</a></p>
+            <p class="pub-meta"><em>Los Angeles Review of Books Quarterly</em> no. 41 &middot; April 2024</p>
+          </div>
+          <div class="pub-item">
+            <p class="pub-title"><a href="https://www.asymptotejournal.com/special-feature/from-i-write-to-you-from-the-east-elina-sventsytska/" target="_blank" rel="noopener">"I Write to You from the East: Four Poems by Elina Sventsytska"</a></p>
+            <p class="pub-meta">Ukrainian to English translation. <em>Asymptote</em> &middot; January 2024</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>Wendi Bootes &nbsp;&middot;&nbsp; <a href="mailto:wendibootes@gmail.com">wendibootes@gmail.com</a></footer>
+  <script>
+    const obs = new IntersectionObserver(entries => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} }); }, {threshold:.06});
+    document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
