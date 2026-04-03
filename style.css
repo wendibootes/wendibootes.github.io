@@ -67,7 +67,7 @@ nav.solid .nav-name { color: var(--ink); }
   transition: color 0.2s;
 }
 nav.solid .nav-links a { color: var(--ink-mid); }
-.nav-links a:hover,
+.nav-links a:hover { color: #F0EDE8; }
 nav.solid .nav-links a:hover { color: var(--accent); }
 .nav-links a.active { color: #F0EDE8; opacity: 1; }
 nav.solid .nav-links a.active { color: var(--accent); opacity: 1; }
