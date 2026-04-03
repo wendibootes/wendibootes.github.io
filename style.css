@@ -69,8 +69,8 @@ nav.solid .nav-name { color: var(--ink); }
 nav.solid .nav-links a { color: var(--ink-mid); }
 .nav-links a:hover,
 nav.solid .nav-links a:hover { color: var(--accent); }
-.nav-links a.active { color: var(--accent); }
-nav.solid .nav-links a.active { color: var(--accent); }
+.nav-links a.active { color: #F0EDE8; opacity: 1; }
+nav.solid .nav-links a.active { color: var(--accent); opacity: 1; }
 
 /* ── Page wrapper ──────────────────────────────────────── */
 .page {
@@ -480,11 +480,57 @@ footer a { text-decoration: none; color: inherit; }
 }
 .fade.visible { opacity: 1; transform: none; }
 
+/* ── Hamburger ─────────────────────────────────────────── */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 101;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: rgba(240, 237, 232, 0.8);
+  transition: transform 0.3s ease, opacity 0.3s ease, background 0.4s ease;
+}
+nav.solid .nav-toggle span { background: var(--ink-mid); }
+.nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
 /* ── Responsive ────────────────────────────────────────── */
 @media (max-width: 700px) {
   nav { padding: 0 1.5rem; }
-  .nav-links { gap: 1.5rem; }
-  .nav-links li:nth-child(n+4) { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--cream);
+    border-bottom: 1px solid var(--rule);
+    padding: 0.5rem 0 1rem;
+    z-index: 99;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { display: block; width: 100%; }
+  .nav-links a {
+    display: block;
+    padding: 0.7rem 1.5rem;
+    color: var(--ink-mid);
+    font-size: 0.75rem;
+  }
+  .nav-links a:hover,
+  .nav-links a.active { color: var(--accent); }
   .about-grid { grid-template-columns: 1fr; }
   .about-photo { max-width: 200px; margin: 0 auto; }
   .triptych { grid-template-columns: 1fr; }
